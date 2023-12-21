@@ -1,0 +1,156 @@
+/* =============== Constant =============== */
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #F7ECDE;
+}
+@font-face 
+{
+    font-family:pacifico ;
+    src: url(../font/Pacifico-Regular.ttf);
+}
+@font-face 
+{
+    font-family:ptsancaption ;
+    src: url(../font/PTSansCaption-Bold.ttf);
+}@font-face 
+{
+    font-family:righteous ;
+    src: url(../font/Righteous-Regular.ttf);
+}
+label,th,td,h3,p,i
+{
+    font-family: ptsancaption;
+}
+:root
+{
+    --overlay-color:rgba(0,0,0,0.7);
+    --first-text-color:#3ca55c;
+    --second-text-color:#fec260;
+    --black-color:#000;
+    --h1-behind-color:#fec260;
+    --normal-foucs-color:#d99c39;
+    --normal-box-shadow-color:#fec26055;
+    --sucess-foucs-color:#198754;
+    --sucess-box-shadow-color:#19875440;
+    --falid-foucs-color:#dc3545;
+    --falid-box-shadow-color:#dc354540;
+    --white-color:#fff;
+    --delete-color:#eb1d36;
+    --delete-hover-background:#d30820;
+    --delete-hover-border-color:#ba081d;
+    --visit-color:#9eb23b;
+    --visit-hover-background:#8a9e23;
+    --visit-hover-border-color:#6e8018;
+    --submit-color:#d1512d;
+    --submit-hover-background:#bb4120;
+    --submit-hover-border-color:#a03315;
+}
+/* =============== Main Context =============== */
+.border-bottom-dotted
+{
+    border-bottom: 2px dotted var(--black-color);
+}
+.context h2
+{
+    background-image: linear-gradient( to right,var(--first-text-color),var(--second-text-color) );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: righteous;
+    font-size: 25px;
+}
+.context h1
+{
+    position: relative;
+    font-family: pacifico;
+    font-size: 50px;
+}
+.context h1::before
+{
+    content: "";
+    position: absolute;
+    bottom: 50px;
+    width: 260px;
+    height: 15px;
+    background-color: var(--h1-behind-color);
+    z-index: -1;
+    transition: all 0.5s;
+}
+.context h1:hover::before 
+{
+    height: 35px;
+}
+
+/* =============== Inputs Form =============== */
+#siteInput .form-control:focus
+{
+    border-color: var(--normal-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--normal-box-shadow-color);
+}
+#siteInput .form-control.is-invalid:focus
+{
+    border-color: var(--falid-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--falid-box-shadow-color);
+}
+#siteInput .is-valid:focus
+{
+    border-color: var(--sucess-foucs-color);
+    box-shadow: 0 0 0 0.25rem var(--sucess-box-shadow-color);
+}
+
+/* =============== Message Box =============== */
+.overlay
+{
+    background-color:var(--overlay-color);
+}
+.overlay i
+{
+    cursor: pointer;
+}
+/* =============== Buttons =============== */
+
+/* --------------- submit button --------------- */
+.btn-submit 
+{
+    color: var(--white-color);
+    background-color: var(--submit-color);
+    border-color: var(--submit-color);
+    
+}
+.btn-submit:hover
+{
+    color: var(--white-color);
+    background-color: var(--submit-hover-background);
+    border-color: var(--submit-hover-border-color);
+}
+/* --------------- delete button --------------- */
+.btn-delete 
+{
+    color: var(--white-color);
+    background-color: var(--delete-color);
+    border-color: var(--delete-color);
+}
+.btn-delete:hover
+{
+    color: var(--white-color);
+    background-color:var(--delete-hover-background) ;
+    border-color: var(--delete-hover-border-color);
+}
+/* --------------- visit button --------------- */
+.btn-visit 
+{
+    color: var(--white-color);
+    background-color: var(--visit-color);
+    border-color: var(--visit-color);
+}
+.btn-visit:hover
+{
+    color: var(--white-color);
+    background-color:var(--visit-hover-background) ;
+    border-color: var(--visit-hover-border-color);
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BookMark</title>
+        <link rel="stylesheet" href="css/all.min.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index-style.css">
+    </head>
+    <body>
+        
+        <!-- Main Context -->
+        <div class="container text-center my-5 context">
+            <h1 class="border-bottom-dotted py-5">Bookmarker</h1>
+            <h2 class=" py-3"><i class="fa-solid fa-bookmark"></i> Bookmark Your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        </div>
+
+        <!-- Inputs -->
+        <div class="container"id="siteInput">
+            <label class="py-3" for="siteNameId"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+            <input type="text" id="siteNameId" class="form-control mb-3" placeholder="Bookmark Name">
+
+            <label class="my py-3" for="siteUrlId"><i class="fa-solid fa-link"></i> Site URL</label>
+            <input type="text" id="siteUrlId" class="form-control" placeholder="Website URL ">
+
+            <div class="text-center border-bottom-dotted pb-3">
+            <button id="addSite" class="btn btn-submit px-5 my-3">Submit</button>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <table class="container table  my-4 text-center w-100 bg-white">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+
+        <!-- Box Message -->
+        <div class="overlay d-none justify-content-center align-items-center fixed-top bottom-0 end-0 start-0 top-0">   
+            <div class="w-50 p-4 bg-white">
+                <div class="d-flex justify-content-between">
+                    <div>
+                        <i class="fa-solid fa-circle fa-2x text-danger pe-2"></i>
+                        <i class="fa-solid fa-circle fa-2x text-warning px-2"></i>
+                        <i class="fa-solid fa-circle fa-2x text-success px-2"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-xmark fa-2x" id="close"></i>
+                    </div>
+                </div>
+                <h3 class="py-3">Site Name or Url is not valid, Please follow the rules below :</h3>
+                <p class="fs-4 text-muted"><i class="fa-regular fa-circle-right text-danger"></i> Site name must contain at least 3 characters</p>
+                <p class="fs-4 text-muted"><i class="fa-regular fa-circle-right text-danger"></i> Site URL must be a valid one</p>
+            </div>
+            
+        </div>
+
+        <!-- JavaScript -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
